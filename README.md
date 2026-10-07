@@ -34,7 +34,7 @@ struct NetworkOrder {
     char          username[USERNAME_LEN];   // fixed-length, NUL-padded
     char          symbol[SYMBOL_LEN];
     std::uint8_t  side;                     // 0 = buy, 1 = sell
-    std::int64_t  price;                    // integer ticks, see below
+    std::uint64_t price;                    // integer ticks, see below
     std::uint32_t quantity;
     std::uint64_t timestamp;
     std::uint64_t checksum;
