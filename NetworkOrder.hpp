@@ -5,7 +5,7 @@ inline constexpr size_t USERNAME_LEN = 16;
 inline constexpr size_t SYMBOL_LEN = 8;
 
 #pragma pack(push, 1)
-struct NetworkOrder {
+typedef struct NetworkOrder {
     uint64_t       order_id;
     char           username[USERNAME_LEN];
     char           symbol[SYMBOL_LEN];
@@ -15,5 +15,5 @@ struct NetworkOrder {
     std::uint64_t  timestamp;
     std::uint64_t  checksum;
     std::uint8_t   padding[3];
-};
-#pragma pop()
+} NetworkOrder;
+#pragma pack(pop)
