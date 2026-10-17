@@ -1,6 +1,11 @@
 #include "NetworkOrder.hpp"
 #include <vector>
 
+//Compile and run with:
+//
+// clang++ -std=c++17 -O2 -pthread main.cpp parse_data.cpp -o run_tests
+// ./run_tests
+
 /**
  * @brief This function will parse all data from the network stream and
  *        reconstruct all orders sent over the network
