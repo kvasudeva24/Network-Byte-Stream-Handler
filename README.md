@@ -62,6 +62,8 @@ static_assert(sizeof(NetworkOrder) == 64, "NetworkOrder must be 64 bytes");
 | 32-bit | `htonl`        | `ntohl`        |
 | 64-bit | `htobe64`      | `be64toh`      |
 
+> **Note:** `htobe64`/`be64toh` are Linux-only. If you're on macOS or Windows, use `htonll`/`ntohll` instead (`<arpa/inet.h>` on macOS, `<winsock2.h>` on Windows).
+
 `side` (one byte) and the `char` arrays need no conversion.
 
 ---
